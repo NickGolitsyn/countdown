@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Clock from './components/Clock';
+import Nav from './components/Nav';
 
-function App() {
+function App({time}) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='container'>
+        <h1>No Nut November ends in</h1>
+        <Nav />
+      </div>
+      <div className='time'>
+        <Clock countdownDate={time} />
+      </div>
     </div>
   );
 }
