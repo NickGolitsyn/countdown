@@ -15,14 +15,14 @@ function Congrats() {
   };
 
   return (
-    <div>
+    <div className='congrats-container'>
       <div className='congrats'>
-        <h1>Congrats!</h1>
-        <h2>No Nut November has finished!</h2>
-        <a className='btn' href='https://www.pornhub.com/video?o=tr' target="_blank">PornHub</a>
-      </div>
-      <div className='congrats-nav'>
-        <Nav />
+        <div>
+          <h1>Countdown finished!</h1>
+        </div>
+        <div className='congrats-nav'>
+          <Nav />
+        </div>
       </div>
       <Particles options={options} init={customInit} />
     </div>

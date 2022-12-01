@@ -3,8 +3,7 @@ import React from 'react'
 function Nav() {
   return (
     <div className='nav'>
-      <a id="stick" href='/'>Local</a>
-      <a href='/global'>Global</a>
+      <a href='/'>Home</a>
     </div>
   )
 }

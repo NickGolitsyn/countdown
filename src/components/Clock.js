@@ -20,7 +20,7 @@ const Clock = ({ countdownDate }) => {
     interval = setInterval(() => {
       const now = new Date().getTime();
 
-      const diff = countdownDate - now;
+      const diff = new Date(countdownDate).getTime() - now;
 
       const days = Math.floor(diff / (24 * 60 * 60 * 1000));
       const hours = Math.floor(diff % (24 * 60 * 60 * 1000) / (1000 * 60 * 60));
@@ -29,7 +29,7 @@ const Clock = ({ countdownDate }) => {
 
       if (diff < 0) {
         setOver(true)
-        clearInterval(interval.current);
+        // clearInterval(interval.current);
       } else {
         setD(days);
         setH(hours);

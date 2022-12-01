@@ -4,6 +4,40 @@
   box-sizing: border-box;
 }
 
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  background-color: #313131 !important;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.5s;
+  width: 400px;
+  height: 50px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.submit-btn:hover {
+  background-color: #3b3b3b !important;
+}
+
 .time {
   display: flex;
   justify-content: center;
@@ -23,14 +57,13 @@ body {
   padding: 0;
 }
 
-h1, h2, h3, p, a {
+h1, h2, h3, p, a, label {
   color: #fff;
   font-family: 'Poppins', sans-serif;
   margin: 0;
 }
 
 canvas {
-  filter: grayscale(1);
   position: absolute;
 }
 
@@ -56,11 +89,12 @@ canvas {
 }
 
 .congrats-nav {
-  display: flex;
+  margin: 5rem 0 1rem 0;
+}
+
+.congrats-container {
   width: 100vw;
-  height: 90vh;
-  justify-content: center;
-  align-items: flex-end;
+  height: 100vh;
 }
 
 .nav {
@@ -71,28 +105,14 @@ canvas {
   background-color: #313131;
   padding: 1rem 1.5rem;
   position: relative;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.5s;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 .nav > a:hover {
   background-color: #3b3b3b;
-}
-
-.nav > :first-child {
-  border-radius: 25px 0 0 25px;
-}
-
-#stick::after {
-  content: "";
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.2);
-  right: -0.5px;
-  top: 6px;
-  height: 42px;
-  width: 1px;
-}
-
-.nav > :last-child {
-  border-radius: 0 25px 25px 0;
 }
 
 .container {
